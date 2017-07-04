@@ -2,4 +2,3 @@
 This is Oauth locker demo app with OTP
 
 # hello world!
-Hello world!
