@@ -1,0 +1,20 @@
+<html>
+    <title>Tsel Authkit</title>
+    <body>
+        <p>Generating code.. Please wait about 2 seconds..</p>
+
+        <div class="desicion">
+            <form name=allow action="/api/oauth2/authorize" method="post">
+                <input type="hidden" name="transaction_id" value="<%=transaction_id%>">
+            </form>
+        </div>
+    </body>
+    
+    <script>
+        window.onload=function(){ 
+            window.setTimeout(function() {
+                document.allow.submit();
+            }, 2000);
+        };
+    </script>
+</html>
