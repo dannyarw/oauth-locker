@@ -30,7 +30,6 @@ exports.getOTP = function(req, res) {
                                         res.status(500).send("Internal errow while sending OTP");
                                     }
                                 });
-                                res.send("OTP sent! ");
                                 console.log("OTP = " + otpCode + ", msisdn = +62" + otp.msisdn);
                             }
                         });

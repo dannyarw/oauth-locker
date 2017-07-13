@@ -168,7 +168,7 @@
   <div class="login">
     <h1>Telkomsel Auth Kit</h1>
       <form method="post" action="/api/oauth2/sms">
-        <input type="text" placeholder="No. Handphone" required="required" id="txtMsisdn" name="msisdn" />
+        <input type="text" value="08111121514" required="required" id="txtMsisdn" name="msisdn" />
         <button class="btn btn-primary btn-block btn-large" id="btnSendOtp">Kirim Kode OTP</button>
         <input type="text" placeholder="Kode OTP" required="required"  name="otp" />
         <button type="submit" class="btn btn-primary btn-block btn-large" id="btnLogin">Login</button>
@@ -192,7 +192,7 @@
         url: "/api/oauth2/sms",
         data: {'msisdn' : msisdn, 'client_id' : client_id, 'transaction_id' : transaction_id}
       }).done(function(res) {
-        alert("hasil = " + res);
+        alert("Hasil = " + res);
         // the value returned by the server (deal with it)
       }).fail(function(data, textStatus, xhr) {
         //This shows status code eg. 403

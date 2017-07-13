@@ -29,8 +29,7 @@ server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, ca
     var code = new Code({
         value: uid(16),
         clientId: client._id,
-        redirectUri: redirectUri,
-        userId: user._id
+        redirectUri: redirectUri
     });
 
     // Save the auth code and check for errors
