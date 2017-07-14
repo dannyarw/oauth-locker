@@ -23,13 +23,14 @@ exports.getOTP = function(req, res) {
                             if (err) {
                                 res.status(500).send("Internal Error");
                             } else {
-                                messaging.sendSms("+62" + Util.formatMsisdn(req.query.msisdn), "Kode untuk masuk aplikasi ini adalah " + otpCode, function(err) {
+                                /*messaging.sendSms("+62" + Util.formatMsisdn(req.query.msisdn), "Kode untuk masuk aplikasi ini adalah " + otpCode, function(err) {
                                     if (!err) {
                                         res.send("OTP Sent!");
                                     } else {
                                         res.status(500).send("Internal errow while sending OTP");
                                     }
-                                });
+                                });*/
+                                res.send("OTP generated!");
                                 console.log("OTP = " + otpCode + ", msisdn = +62" + otp.msisdn);
                             }
                         });

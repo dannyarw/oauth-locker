@@ -45,6 +45,9 @@ server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, ca
 // Exchange authorization codes for access tokens
 server.exchange(oauth2orize.exchange.code(function(client, code, redirectUri, callback) {
     Code.findOne({ value: code }, function(err, authCode) {
+
+        console.log("authCode:" + authCode);
+
         if (err) {
             return callback(err);
         }

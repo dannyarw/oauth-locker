@@ -13,7 +13,7 @@ var oauth2Controller = require('./controllers/oauth2');
 var smsController = require('./controllers/sms');
 
 // Connect to the itemlocker MongoDB
-mongoose.connect('mongodb://localhost:27017/locker');
+mongoose.connect('mongodb://localhost:27017/oauth-locker');
 
 // Create our Express application
 var app = express();
